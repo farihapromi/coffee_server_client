@@ -10,7 +10,9 @@ import {
 import "./index.css";
 
 
-import Users from './components/Users.jsx';
+
+import AddCoffee from './components/AddCoffee.jsx';
+import UpdateCoffee from './components/UpdateCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,10 +20,15 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path:'/users',
-    element:<Users/>,
-    loader:()=>fetch('http://localhost:5000/users')
+    path:'/add-coffee',
+    element:<AddCoffee/>
+  },
+  {
+
+    path:'/update-coffee',
+    element:<UpdateCoffee/>
   }
+  
      
   
 ]);
