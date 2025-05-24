@@ -34,7 +34,7 @@ const AddCoffee = () => {
     body:JSON.stringify(newCoffee)
 
   })
-  .then(res=>res.json)
+ .then(res => res.json())
   .then(data=>{
     console.log(data)
   })
