@@ -1,4 +1,5 @@
-import React from 'react'
+import Swal from 'sweetalert2'
+
 
 const AddCoffee = () => {
     const handleAddCoffee=e=>{
@@ -37,6 +38,14 @@ const AddCoffee = () => {
  .then(res => res.json())
   .then(data=>{
     console.log(data)
+    if(data.insertedId){
+        Swal.fire({
+  title: 'Success!',
+  text: 'User added successfully',
+  icon: 'success',
+  confirmButtonText: 'Cool'
+})
+    }
   })
   .catch(error=>console.log(error))
 
