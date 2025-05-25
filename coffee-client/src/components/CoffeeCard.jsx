@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsEye } from "react-icons/bs";
 import { FaPen, FaTrashAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const CoffeeCard = ({coffee}) => {
@@ -67,9 +68,9 @@ Swal.fire({
   <button className="btn btn-sm bg-[#C1B086] hover:bg-[#b39e75] text-white">
     <BsEye className="text-xl" />
   </button>
-  <button className="btn btn-sm bg-[#3E3E3E] hover:bg-[#2c2c2c] text-white">
+  <Link to={`update-coffee/${_id}`}><button className="btn btn-sm bg-[#3E3E3E] hover:bg-[#2c2c2c] text-white">
     <FaPen className="text-sm" />
-  </button>
+  </button></Link>
   <button className="btn btn-sm bg-[#DB504A] hover:bg-red-700 text-white"
   onClick={()=>handleDelete(_id)}
   >
