@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { useLoaderData } from 'react-router-dom'
 import CoffeeCard from './components/CoffeeCard'
+import Footer from './components/Footer'
 
 function App() {
   const loadedCoffees=useLoaderData()
@@ -24,8 +25,10 @@ function App() {
     />)
   }
   </div>
+ 
 
   </div>
+ 
   )
 }
 
