@@ -10,6 +10,8 @@ import App from './App.jsx';
 import AddCoffee from './components/AddCoffee.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
 import MainLayout from './components/MainLayout.jsx';
+import SignIn from './components/SignIn.jsx';
+import Signup from './components/Signup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,15 @@ const router = createBrowserRouter([
         element: <UpdateCoffee />,
         loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
       },
+      {
+        path:'sign-in',
+        element:<SignIn/>
+      }
+      ,
+    {
+      path:'/sign-up',
+      element:<Signup/>
+    }
     ],
   },
 ]);
